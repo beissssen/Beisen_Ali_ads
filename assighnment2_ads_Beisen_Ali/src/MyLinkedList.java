@@ -2,28 +2,27 @@ package classes;
 
 import java.util.Iterator;
 
-public class MyLinkedList<T>  implements MyList<T> {//generic type T, can hold any type of elements
-    private Node<T> head;//reference to the first node
-    private int size=0;//keeps size
+public class MyLinkedList<T>  implements MyList<T> {
+    private Node<T> head;
+    private int size=0;
 
-    public MyLinkedList(){//constructor
+    public MyLinkedList(){
         head = null;
         size = 0;
-        //ready to add elements as needed.
     }
 
     @Override
     public void addElement(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
-            head = newNode;//set head to new node
+            head = newNode;
         }
         else {
             Node<T> currentNode = head;
             while (currentNode.next != null){
                 currentNode = currentNode.next;
             }
-            currentNode.next = newNode;//create new node
+            currentNode.next = newNode;
         }
         size++;
     }
@@ -41,8 +40,8 @@ public class MyLinkedList<T>  implements MyList<T> {//generic type T, can hold a
     }
 
     @Override
-    public T getElement(int index) {//return element in a specific index
-        checkIndex(index);//check if index valid
+    public T getElement(int index) {
+        checkIndex(index);
         Node<T> currentNode = head;
         if (index == 0)
             return currentNode.data;
