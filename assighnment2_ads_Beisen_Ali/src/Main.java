@@ -1,14 +1,11 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import classes.MyStack;
+import classes.MyLinkedList;
+import classes.MyArrayList;
+import classes.MyQueue;
+import classes.MyMinHeap;
 
 public class Main {
     public static void main(String[] args) {
-        MyLinkedList myLinkedList = new MyLinkedList<>();
-
-        myLinkedList.addElement(1);
-        myLinkedList.addElement(2);
-        myLinkedList.addElement(3);
-        myLinkedList.addElement(4);
-        myLinkedList.addElement(5);
+        
     }
 }
