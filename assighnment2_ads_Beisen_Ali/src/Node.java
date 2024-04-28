@@ -1,20 +1,21 @@
-package classes;
 
 public class Node<T> {
-    public T element;
-    T data;
-    Node next;
+    /* Mode class for a linked list
+    */
+    public T data; 
+    public Node<T> next; 
     public Node(T data) {
         this.data = data;
-        next = null;
+        this.next = null;
     }
-    public <T> Node(T element, Node<T> head) {
-
+    public Node(T data, Node<T> next) {
+        this.data = data;
+        this.next = next;
     }
     public T getData() {
         return data;
     }
-    public T getNext() {
-        return data;
+    public Node<T> getNext() {
+        return next;
     }
 }
