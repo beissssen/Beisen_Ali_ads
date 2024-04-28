@@ -1,10 +1,17 @@
+package classes;
+
 public class Node<T> {
-    T data;//stores data in node
+    public T element;
+    T data;
     Node next;
 
     public Node(T data) {
         this.data = data;
         next = null;
+    }
+
+    public <T> Node(T element, Node<T> head) {
+
     }
 
     public T getData() {
