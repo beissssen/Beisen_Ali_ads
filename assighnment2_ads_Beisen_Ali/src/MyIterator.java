@@ -1,14 +1,11 @@
-public class MyIterator<T> {
+public class MyIterator<T extends Comparable<T>> {
     private Node<T> currentNode;
-
     public MyIterator(MyLinkedList<T> list) {
         currentNode = list.getHead();
     }
-
     public boolean hasNext() {
-        return currentNode != null;//checks if there is a next element available
+        return currentNode != null;
     }
-
     public T next() {
         if (!hasNext()) {
             throw new IllegalStateException("No next element available");
