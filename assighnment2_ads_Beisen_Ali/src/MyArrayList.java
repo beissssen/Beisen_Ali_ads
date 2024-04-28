@@ -2,6 +2,10 @@ import java.lang.reflect.Array;
 import java.util.Iterator;
 
 public class MyArrayList<T> implements MyList<T> {
+    /* class implements the MyList interface
+     * provides various methods for adding, setting, and manipulating elements in the list, 
+     * along with methods for managing the size and capacity of the internal array.
+    */
     private static final int DEFAULT_CAPACITY = 6;
     private Object[] arr;
     private int size;
