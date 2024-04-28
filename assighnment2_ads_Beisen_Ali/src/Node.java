@@ -1,23 +1,38 @@
 package classes;
 
-public class Node<T> {
-    public T element;
-    T data;
-    Node next;
+public class MyStack<T extends Comparable<T>> {
+   
+    private MyLinkedList<T> stack;
 
-    public Node(T data) {
-        this.data = data;
-        next = null;
+    public MyStack() {
+        stack = new MyLinkedList<>();
     }
 
-    public <T> Node(T element, Node<T> head) {
-
+    public void push(T item) {
+        stack.addElement(item);
     }
 
-    public T getData() {
-        return data;
+    public T pop() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        T item = stack.getElement(0);
+        stack.remove(0);
+        return item;
     }
-    public T getNext() {
-        return data;
+
+    public T peek() {
+        if (isEmpty()) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return stack.getElement(0);
+    }
+
+    public boolean isEmpty() {
+        return stack.getSize() == 0;
+    }
+
+    public MyIterator<T> iterator() {//iterating over the elements
+        return new MyIterator<>(stack);
     }
 }
