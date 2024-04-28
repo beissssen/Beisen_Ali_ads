@@ -1,6 +1,8 @@
 import java.util.Iterator;
 
 public interface MyList<T> {
+    /* MyList interface provides a comprehensive set of methods for working with list-like data structures
+    */
     void addElement(T data);
     void setElement(int index, T element);
     void addElement(int index, T element);
