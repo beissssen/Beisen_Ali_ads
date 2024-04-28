@@ -1,5 +1,8 @@
-public class MyStack<T> {
+package classes;
+
+public class MyStack<T extends Comparable<T>> {
     private MyLinkedList<T> stack;
+
     public MyStack() {
         stack = new MyLinkedList<>();
     }
@@ -28,7 +31,7 @@ public class MyStack<T> {
         return stack.getSize() == 0;
     }
 
-    public MyIterator<T> iterator() {
+    public MyIterator<T> iterator() {//iterating over the elements
         return new MyIterator<>(stack);
     }
 }
