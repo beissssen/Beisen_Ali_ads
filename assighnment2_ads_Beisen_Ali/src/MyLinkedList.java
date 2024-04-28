@@ -1,6 +1,8 @@
 import java.util.Iterator;
 
 public class MyLinkedList<T extends Comparable<T>> implements MyList<T> {
+    /* MyLinkedList class implements a singly linked list with various methods for adding, removing, and accessing elements
+    */
     private Node<T> head;
     private int size;
 
