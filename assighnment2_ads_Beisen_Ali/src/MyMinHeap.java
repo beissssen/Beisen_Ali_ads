@@ -3,6 +3,9 @@ import classes.Exception;
 import classes.MyArrayList;
 
 public class MyMinHeap<T extends Comparable<T>> {
+    /* This MyMinHeap class provides methods to insert, delete, and retrieve the minimum element from the heap.
+     * bubbleUp and bubbleDown operations are used after insertion and deletion
+    */
     private MyArrayList<T> heap, myArrayList;
 
     public MyMinHeap() {
